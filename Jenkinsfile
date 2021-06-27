@@ -21,8 +21,8 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh 'aws s3 cp s3://dev-jrtechee-artifactory/petclinic-$BUILD_NUMBER.war petclinic.war   
-			scp petclinic.war root@10.0.99.210:/opt/tomcat/webapps/'
+        sh 'aws s3 cp s3://dev-jrtechee-artifactory/petclinic-$BUILD_NUMBER.war petclinic.war   \n
+		scp petclinic.war root@10.0.99.210:/opt/tomcat/webapps/'
       }
     }
 
